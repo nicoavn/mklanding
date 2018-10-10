@@ -110,8 +110,6 @@
 
         <div class="reasons section row justify-content-center">
             <div class="col-md-11">
-                <h3 class="section-heading">Hay muchas razones por las que te encantará tener MedoKit®</h3>
-
                 <div class="row justify-content-center">
                     <div class="reasons-content col-md-5">
                         <h4>Seguro y confiable</h4>
@@ -144,7 +142,11 @@
         <div class="form-appointment section row justify-content-center">
             <div class="col-md-11">
                 <div class="row justify-content-center">
-                    <form action="#" id="form-appointment" class="col-md-8 col-sm-10 col-lg-8">
+                    <form action="https://medokit.us19.list-manage.com/subscribe/post?u=75cc35695d190a60f088d036b&amp;id=89d45ef0d2"
+                          id="form-appointment"
+                          class="col-md-8 col-sm-10 col-lg-8 validate"
+                          name="mc-embedded-subscribe-form" target="_blank" novalidate
+                    >
                         <div class="row justify-content-center">
                             <div class="col-md-11">
                                 <h3>SOLICITA UNA VISITA</h3>
@@ -153,20 +155,20 @@
 
                             <div class="col-md-8 col-sm-10 col-lg-6">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="fullname" required="required" placeholder="Nombre completo" />
+                                    <input type="text" class="form-control" name="FNAME" id="fullname" required="required" placeholder="Nombre completo" />
                                 </div>
 
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="email" placeholder="Correo electrónico" />
+                                    <input type="text" class="form-control" name="EMAIL" id="email" placeholder="Correo electrónico" />
                                 </div>
 
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="phone" required="required" placeholder="Teléfono" />
+                                    <input type="text" class="form-control" name="PHONE" id="phone" required="required" placeholder="Teléfono" />
                                 </div>
 
                                 <div class="form-group">
                                     <label for="comment">Comentario</label>
-                                    <textarea class="form-control" name="comment" id="comment"></textarea>
+                                    <textarea class="form-control" name="COMMENT" id="comment"></textarea>
                                 </div>
 
                                 <div class="form-group">
@@ -237,67 +239,71 @@
         </div>
     </footer>
 </div>
+<!--<script-->
+        <!--src="https://code.jquery.com/jquery-3.3.1.min.js"-->
+        <!--integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="-->
+        <!--crossorigin="anonymous"></script>-->
 <script
-        src="https://code.jquery.com/jquery-3.3.1.min.js"
-        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
         crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
 <script type="application/javascript">
-    const APPOINTMENT_URL = "https://api.sendgrid.com/v3/mail/send";
-    const API_KEY = "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";
-
-    onSuccess = (data) => {
-        debugger;
-        alert(data);
-    };
-
-    onError = (error) => {
-        debugger;
-        alert(error);
-    };
-
-    $(function() {
-        const form = $('#form-appointment');
-        form.submit((evt) => {
-            evt.preventDefault();
-            let fullname = $('#fullname').val();
-            let email = $('#email').val();
-            let phone = $('#phone').val();
-            let comment = $('#comment').val();
-
-            let appointmentData = {
-                fullname,
-                email,
-                phone,
-                comment,
-            };
-
-            let data = {
-                "personalizations": [
-                    {"to": [{"email": "info@medokit.com"}]}
-                ],
-                "from": {"email": "info@medokit.com"},
-                "subject": "Solicitud de visita",
-                "content": [{"type": "text/plain", "value": appointmentData}]
-            };
-
-            $.ajax(APPOINTMENT_URL, {
-                data: data,
-                method: 'POST',
-                success: onSuccess,
-                error: onError,
-                crossDomain: true,
-                headers: {
-                    Authorization: "Bearer " + API_KEY,
-                    "Content-Type": "application/json"
-                },
-            });
-
-            // alert("submit!");
-        });
-    });
+    // const APPOINTMENT_URL = "https://api.sendgrid.com/v3/mail/send";
+    // const API_KEY = "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";
+    //
+    // onSuccess = (data) => {
+    //     debugger;
+    //     alert(data);
+    // };
+    //
+    // onError = (error) => {
+    //     debugger;
+    //     alert(error);
+    // };
+    //
+    // $(function() {
+    //     const form = $('#form-appointment');
+    //     form.submit((evt) => {
+    //         evt.preventDefault();
+    //         let fullname = $('#fullname').val();
+    //         let email = $('#email').val();
+    //         let phone = $('#phone').val();
+    //         let comment = $('#comment').val();
+    //
+    //         let appointmentData = {
+    //             fullname,
+    //             email,
+    //             phone,
+    //             comment,
+    //         };
+    //
+    //         let data = {
+    //             "personalizations": [
+    //                 {"to": [{"email": "info@medokit.com"}]}
+    //             ],
+    //             "from": {"email": "info@medokit.com"},
+    //             "subject": "Solicitud de visita",
+    //             "content": [{"type": "text/plain", "value": appointmentData}]
+    //         };
+    //
+    //         $.ajax(APPOINTMENT_URL, {
+    //             data: data,
+    //             method: 'POST',
+    //             success: onSuccess,
+    //             error: onError,
+    //             crossDomain: true,
+    //             headers: {
+    //                 Authorization: "Bearer " + API_KEY,
+    //                 "Content-Type": "application/json"
+    //             },
+    //         });
+    //
+    //         // alert("submit!");
+    //     });
+    // });
 </script>
 </body>
 </html>
