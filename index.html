@@ -245,7 +245,8 @@
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
 <script type="application/javascript">
-    const APPOINTMENT_URL = "https://www.medokit.com/appointment";
+    const APPOINTMENT_URL = "https://api.sendgrid.com/v3/mail/send";
+    const API_KEY = "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";
 
     onSuccess = (data) => {
         debugger;
@@ -273,12 +274,25 @@
                 comment,
             };
 
+            let data = {
+                "personalizations": [
+                    {"to": [{"email": "info@medokit.com"}]}
+                ],
+                "from": {"email": "info@medokit.com"},
+                "subject": "Solicitud de visita",
+                "content": [{"type": "text/plain", "value": appointmentData}]
+            };
+
             $.ajax(APPOINTMENT_URL, {
-                data: appointmentData,
+                data: data,
                 method: 'POST',
                 success: onSuccess,
                 error: onError,
                 crossDomain: true,
+                headers: {
+                    Authorization: "Bearer " + API_KEY,
+                    "Content-Type": "application/json"
+                },
             });
 
             // alert("submit!");
