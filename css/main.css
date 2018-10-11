@@ -1,3 +1,16 @@
+@font-face {
+    font-family: 'cocogooseregular';
+    src: url('./fonts/cocogoose-webfont.eot');
+    src: url('./fonts/cocogoose-webfont.eot?#iefix') format('embedded-opentype'),
+    url('./fonts/cocogoose-webfont.woff2') format('woff2'),
+    url('./fonts/cocogoose-webfont.woff') format('woff'),
+    url('./fonts/cocogoose-webfont.ttf') format('truetype'),
+    url('./fonts/cocogoose-webfont.svg#cocogooseregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 :root {
     /*--main-bg-color: coral;*/
     /*--main-txt-color: blue;*/
@@ -11,7 +24,7 @@
     --cAltGray: #5D5D5D;
 
     --fMain: 'Montserrat', 'Helvetica', 'Arial', san-serif;
-    --fSecondary: 'Cocogoose', 'Helvetica', 'Arial', san-serif;
+    --fSecondary: 'cocogooseregular', 'Helvetica', 'Arial', san-serif;
 }
 
 body {
