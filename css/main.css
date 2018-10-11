@@ -98,8 +98,7 @@ header > div {
 }
 
 .btn-link.btn-filled,
-.btn-link.btn-filled:not([href]):not([tabindex])
-{
+.btn-link.btn-filled:not([href]):not([tabindex]) {
     background: var(--cMainBlueLight);
     color: white;
     letter-spacing: 4px;
@@ -364,8 +363,18 @@ footer .rights {
         padding-top: 180px;
     }
 
+    .process.section {
+        padding-top: 50px;
+        padding-bottom: 30px;
+    }
+
     .process.section .process-box + .process-box {
         background: none;
+    }
+
+    .reasons.section, .reasons.section + .reasons.section {
+        padding-top: 50px;
+        padding-bottom: 30px;
     }
 
     .form-appointment.section form {
