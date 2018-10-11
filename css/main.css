@@ -78,6 +78,7 @@ header > div {
 
 .btn-link,
 .btn-link:active,
+.btn-link:not([href]):not([tabindex]),
 .btn-link:focus,
 .btn-link:visited,
 .btn-link:hover {
@@ -96,7 +97,9 @@ header > div {
     cursor: pointer;
 }
 
-.btn-link.btn-filled {
+.btn-link.btn-filled,
+.btn-link.btn-filled:not([href]):not([tabindex])
+{
     background: var(--cMainBlueLight);
     color: white;
     letter-spacing: 4px;
