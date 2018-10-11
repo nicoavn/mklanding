@@ -394,6 +394,10 @@ footer .rights {
         padding-left: 16px;
         padding-right: 16px;
     }
+
+    footer {
+        text-align: center;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
