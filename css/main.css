@@ -347,9 +347,21 @@ footer .rights {
 }
 
 @media (max-width: 767px) {
-    header {}
+    header > div {
+        width: auto;
+    }
+
     header .image-container.logo-container {
         margin-bottom: 16px;
+    }
+
+    header .top-links-container {
+        text-align: center;
+    }
+
+    .welcome.section {
+        text-align: center;
+        padding-top: 180px;
     }
 
     .process.section .process-box + .process-box {
