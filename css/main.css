@@ -382,3 +382,9 @@ footer .rights {
         padding-right: 16px;
     }
 }
+
+@media (min-width: 768px) and (max-width: 991px) {
+    footer .footer-social .social-links a + a {
+        margin-left: 10px;
+    }
+}
