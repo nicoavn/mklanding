@@ -70,6 +70,7 @@ header > div {
 .top-links-container .icon-key,
 .top-links-container .icon-key:active,
 .top-links-container .icon-key:focus,
+.top-links-container .icon-key:visited,
 .top-links-container .icon-key:hover {
     background: transparent url("../img/icon-key.png") center left 14px no-repeat;
     padding: 11px 16px 11px 55px;
@@ -78,6 +79,7 @@ header > div {
 .btn-link,
 .btn-link:active,
 .btn-link:focus,
+.btn-link:visited,
 .btn-link:hover {
     text-transform: uppercase;
     border: 1px solid var(--cMainBlueLight);
