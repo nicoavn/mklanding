@@ -203,6 +203,7 @@ span.big {
 
 .reasons.section + .reasons.section {
     background: white;
+    padding-top: 64px;
 }
 
 .reasons.section .section-heading {
