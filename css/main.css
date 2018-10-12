@@ -359,21 +359,49 @@ footer .rights {
 }
 
 @media (max-width: 767px) {
+    header {
+        padding-top: 14px;
+    }
+
     header > div {
         width: auto;
+        position: relative;
+        margin-bottom: -20px;
     }
 
     header .image-container.logo-container {
-        margin-bottom: 16px;
+        margin-top: 16px;
+        margin-bottom: 0;
     }
 
     header .top-links-container {
         text-align: center;
     }
 
+    span.big {
+        font-size: 33px;
+    }
+
     .welcome.section {
         text-align: center;
-        padding-top: 180px;
+        padding-top: 0;
+    }
+
+    .welcome.section p {
+        padding-top: 74px;
+        font-size: 15px;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    .welcome.section p + p {
+        padding-top: 10px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .welcome.section span.big {
+        padding: 45px 0;
     }
 
     .process.section {
