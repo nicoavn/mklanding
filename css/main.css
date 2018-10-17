@@ -264,6 +264,12 @@ span.big {
     margin: 0;
 }
 
+.pricing.section .card-deck .card .card-body ul {
+    text-align: left;
+    padding-left: 20px;
+    font-size: 14px;
+}
+
 .pricing.section .card-deck .card .card-body ul li + li {
     margin-top: 10px;
 }
