@@ -236,6 +236,43 @@ span.big {
     margin-top: 32px;
 }
 
+.pricing.section {
+    padding: 45px 0 45px;
+    background: var(--cMainBlueLighter);
+}
+
+.pricing.section > div > h4 {
+    margin: 0 0 18px;
+    color: var(--cMainBlue);
+}
+
+.pricing.section > div > p {
+    margin: 0 0 45px;
+}
+
+.pricing.section .card-deck .card {
+    min-width: 220px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+
+.pricing.section .card-deck .card h4 {
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--cMainBlueLight);
+    margin: 0;
+}
+
+.pricing.section .card-deck .card .card-body ul li + li {
+    margin-top: 10px;
+}
+
+.pricing.section .card-deck .card .pricing-card-title {
+    color: var(--cMainBlue);
+    font-size: 28px;
+}
+
 .form-appointment.section {
     background: var(--cMainBlueLight);
     padding: 68px 0;
