@@ -277,6 +277,31 @@ span.big {
 .pricing.section .card-deck .card .pricing-card-title {
     color: var(--cMainBlue);
     font-size: 28px;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.pricing.section .optional-add-on-row > div > div {
+    background: white;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.pricing.section .optional-add-on-row p {
+    font-weight: 700;
+    padding: 12px;
+    width: 100%;
+}
+
+.pricing.section .card-deck .card .pricing-card-title > div {
+    align-items: center;
+}
+
+.pricing.section .card-deck .card .text-muted {
+    font-size: 16px;
 }
 
 .form-appointment.section {
