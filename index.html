@@ -268,7 +268,7 @@
                                         <input type="text" class="form-control" name="FNAME" id="fullname" required="required" placeholder="Nombre completo" />
                                     </div>
 
-                                    <div class="form-group">
+                                    <div class="form-group hidden">
                                         <input type="text" class="form-control" name="EMAIL" id="email" placeholder="Correo electrónico" />
                                     </div>
 
@@ -377,6 +377,12 @@
             }
         });
     }
+
+    $(function() {
+        var d = new Date();
+        var generatedSubEmail = d.getFullYear() + d.getMonth() + d.getDate();
+        $('#email').val('info+' + generatedSubEmail + '@medokit.com');
+    });
     // const APPOINTMENT_URL = "https://api.sendgrid.com/v3/mail/send";
     // const API_KEY = "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";
     //

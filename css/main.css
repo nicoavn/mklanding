@@ -426,6 +426,10 @@ footer .rights {
     padding-top: 58px;
 }
 
+.hidden {
+    display: none;
+}
+
 @media (max-width: 767px) {
     header {
         padding-top: 14px;
