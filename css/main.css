@@ -426,8 +426,17 @@ footer .rights {
     padding-top: 58px;
 }
 
-.hidden {
+.field-errors {
     display: none;
+    color: var(--cMainBlueLight);
+    font-size: 13px;
+    margin-top: 5px;
+    position: relative;
+    float:left;
+}
+
+.field-errors.visible {
+    display: block;
 }
 
 @media (max-width: 767px) {

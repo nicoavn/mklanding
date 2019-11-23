@@ -266,9 +266,10 @@
                                 <div class="col-md-8 col-sm-10 col-lg-8 col-xl-6">
                                     <div class="form-group">
                                         <input type="text" class="form-control" name="FNAME" id="fullname" required="required" placeholder="Nombre completo" />
+                                        <div class="field-errors"></div>
                                     </div>
 
-                                    <div class="form-group hidden">
+                                    <div class="form-group">
                                         <input type="text" class="form-control" name="EMAIL" id="email" placeholder="Correo electrónico" />
                                     </div>
 
@@ -362,80 +363,48 @@
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
 <script type="application/javascript">
+    "use strict";
+
     function scrollToAppointmentForm () {
         let target = $('#form-appointment');
         $('html, body').animate({
             scrollTop: target.offset().top - 30
         }, 1000, function() {
-            var $target = $("#fullname");
-            $target.focus();
-            if ($target.is(":focus")) { // Checking if the target was focused
+            let nameField = $("#fullname");
+            nameField.focus();
+            if (nameField.is(":focus")) { // Checking if the target was focused
                 return false;
             } else {
-                $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
-                $target.focus(); // Set focus again
+                nameField.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+                nameField.focus(); // Set focus again
             }
         });
     }
 
     $(function() {
-        var d = new Date();
-        var generatedSubEmail = d.getFullYear() + d.getMonth() + d.getDate();
-        $('#email').val('info+' + generatedSubEmail + '@medokit.com');
+        let target = $('#form-appointment');
+        target.submit(function(){
+            let name = $('#fullname');
+            // let phone = $('#phone');
+            let email = $('#email');
+
+            if (!name.val()) {
+                let fe = name.next('.field-errors');
+                fe.removeClass('visible');
+                fe.empty();
+                fe.html('Por favor complete este campo.');
+                fe.addClass('visible');
+                return false;
+            }
+
+            if (email.val())
+                return true;
+            let d = new Date();
+            let generatedSubEmail = `sol-${d.getFullYear()}${d.getMonth()}${d.getDate()}`;
+            email.val('info+' + generatedSubEmail + '@medokit.com');
+            return true;
+        });
     });
-    // const APPOINTMENT_URL = "https://api.sendgrid.com/v3/mail/send";
-    // const API_KEY = "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";
-    //
-    // onSuccess = (data) => {
-    //     debugger;
-    //     alert(data);
-    // };
-    //
-    // onError = (error) => {
-    //     debugger;
-    //     alert(error);
-    // };
-    //
-    // $(function() {
-    //     const form = $('#form-appointment');
-    //     form.submit((evt) => {
-    //         evt.preventDefault();
-    //         let fullname = $('#fullname').val();
-    //         let email = $('#email').val();
-    //         let phone = $('#phone').val();
-    //         let comment = $('#comment').val();
-    //
-    //         let appointmentData = {
-    //             fullname,
-    //             email,
-    //             phone,
-    //             comment,
-    //         };
-    //
-    //         let data = {
-    //             "personalizations": [
-    //                 {"to": [{"email": "info@medokit.com"}]}
-    //             ],
-    //             "from": {"email": "info@medokit.com"},
-    //             "subject": "Solicitud de visita",
-    //             "content": [{"type": "text/plain", "value": appointmentData}]
-    //         };
-    //
-    //         $.ajax(APPOINTMENT_URL, {
-    //             data: data,
-    //             method: 'POST',
-    //             success: onSuccess,
-    //             error: onError,
-    //             crossDomain: true,
-    //             headers: {
-    //                 Authorization: "Bearer " + API_KEY,
-    //                 "Content-Type": "application/json"
-    //             },
-    //         });
-    //
-    //         // alert("submit!");
-    //     });
-    // });
 </script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127396356-1"></script>
