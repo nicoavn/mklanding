@@ -36,6 +36,7 @@ body {
 header {
     padding-top: 38px;
     position: relative;
+    background: var(--cMainBlueLight);
 }
 
 footer {
@@ -74,6 +75,11 @@ p strong {
 header > div {
     position: absolute;
     width: 100%;
+}
+
+header .btn-link {
+    border: 1px solid white !important;
+    color: white !important;
 }
 
 .top-links-container {
@@ -160,15 +166,19 @@ span.big {
 /* Sections */
 
 .welcome.section {
-    background: transparent url("../img/bg-header.jpg") top center no-repeat;
-    -webkit-background-size: cover;
-    background-size: cover;
-    padding-top: 362px;
-    padding-bottom: 114px;
+    /*background: transparent url("../img/bg-header.jpg") top center no-repeat;*/
+    background: var(--cMainBlueLight);
+    /*-webkit-background-size: cover;*/
+    /*background-size: cover;*/
+    padding-top: 222px;
+    padding-bottom: 54px;
+    margin-top: -38px;
+    text-align: center;
+    color: white;
 }
 
 .welcome.section p {
-    font-size: 17px;
+    font-size: 56px;
     font-family: var(--fSecondary);
 }
 
@@ -181,9 +191,16 @@ span.big {
     display: inline-block;
 }
 
+
+.welcome.section .btn-link.btn-filled {
+    color: white;
+    border-color: white;
+}
+
+
 .process.section {
-    padding-top: 120px;
-    padding-bottom: 108px;
+    padding-top: 86px;
+    padding-bottom: 52px;
 }
 
 .process.section .process-box {
@@ -432,7 +449,7 @@ footer .rights {
     font-size: 13px;
     margin-top: 5px;
     position: relative;
-    float:left;
+    float: left;
 }
 
 .field-errors.visible {
