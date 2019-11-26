@@ -36,7 +36,6 @@ body {
 header {
     padding-top: 38px;
     position: relative;
-    background: var(--cMainBlueLight);
 }
 
 footer {
@@ -75,6 +74,7 @@ p strong {
 header > div {
     position: absolute;
     width: 100%;
+    background: var(--cMainBlueLight);
 }
 
 header .btn-link {
@@ -462,13 +462,14 @@ footer .rights {
 
 @media (max-width: 767px) {
     header {
-        padding-top: 14px;
+        padding-top: 0;
     }
 
     header > div {
         width: auto;
         position: relative;
         margin-bottom: -20px;
+        padding-top: 20px
     }
 
     header .image-container.logo-container {
