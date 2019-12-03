@@ -403,7 +403,8 @@
             if (email.val())
                 return true;
             let d = new Date();
-            let generatedSubEmail = `sol-${d.getFullYear()}${d.getMonth()}${d.getDate()}`;
+            let rand = Math.random() * 1000;
+            let generatedSubEmail = `sol-${d.getFullYear()}${d.getMonth()}${d.getDate()}${rand}`;
             email.val('info+' + generatedSubEmail + '@medokit.com');
             return true;
         });
