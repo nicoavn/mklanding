@@ -313,6 +313,15 @@ span.big {
     width: 100%;
 }
 
+.pricing.section .taxes-notice-row > div > div {
+    background: none;
+}
+
+.pricing.section .taxes-notice-row p {
+    padding: 3px 0 6px;
+    font-size: 10px;
+}
+
 .pricing.section .card-deck .card .pricing-card-title > div {
     align-items: center;
 }
