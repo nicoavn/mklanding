@@ -191,7 +191,6 @@ span.big {
     display: inline-block;
 }
 
-
 .welcome.section .btn-link.btn-filled {
     color: white;
     border-color: white;
@@ -469,6 +468,12 @@ footer .rights {
     display: none;
 }
 
+@media (max-width: 1366px) {
+    .welcome.section p {
+        font-size: 49px;
+    }
+}
+
 @media (max-width: 767px) {
     header {
         padding-top: 0;
@@ -548,4 +553,35 @@ footer .rights {
     footer .footer-social .social-links a + a {
         margin-left: 10px;
     }
+}
+
+.covid-offer.section {
+    background: var(--cMainBlueLighter);
+    padding: 24px 20px;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.covid-offer.section p {
+    margin-bottom: 0;
+    text-align: center;
+    font-size: 16px;
+    color: var(--cAltGray);
+}
+
+.covid-offer.section p svg {
+    margin-right: 10px;
+}
+
+.covid-offer.section p span {
+    vertical-align: middle;
+    display: inline-block;
+}
+
+/*.covid-offer.section p span strong {*/
+/*}*/
+
+.covid-offer.section p span a {
+    font-weight: 700;
+    color: var(--cMainBlue);
 }
