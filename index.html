@@ -84,13 +84,18 @@
 
         <div class="section covid-offer">
             <p>
-                <svg class="bi bi-exclamation-circle" width="25px" height="25px" viewBox="0 0 16 16" fill="red" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" d="M8 15A7 7 0 108 1a7 7 0 000 14zm0 1A8 8 0 108 0a8 8 0 000 16z" clip-rule="evenodd"></path>
-                    <path d="M7.002 11a1 1 0 112 0 1 1 0 01-2 0zM7.1 4.995a.905.905 0 111.8 0l-.35 3.507a.552.552 0 01-1.1 0L7.1 4.995z"></path>
+                <svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="24" width="24" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+                    <g transform="translate(0 -1028.4)">
+                        <path d="m22 12c0 5.523-4.477 10-10 10-5.5228 0-10-4.477-10-10 0-5.5228 4.4772-10 10-10 5.523 0 10 4.4772 10 10z" transform="translate(0 1029.4)" fill="#27ae60"/>
+                        <path d="m22 12c0 5.523-4.477 10-10 10-5.5228 0-10-4.477-10-10 0-5.5228 4.4772-10 10-10 5.523 0 10 4.4772 10 10z" transform="translate(0 1028.4)" fill="#2ecc71"/>
+                        <path d="m16 1037.4-6 6-2.5-2.5-2.125 2.1 2.5 2.5 2 2 0.125 0.1 8.125-8.1-2.125-2.1z" fill="#27ae60"/>
+                        <path d="m16 1036.4-6 6-2.5-2.5-2.125 2.1 2.5 2.5 2 2 0.125 0.1 8.125-8.1-2.125-2.1z" fill="#ecf0f1"/>
+                    </g>
                 </svg>
 
                 <span>
-                    Oferta de <strong>3 meses gratis</strong> por motivo del COVID-19. <a href="https://app.medokit.com/signup?promo=covid">Clic aquí</a>
+<!--                    Regístrate en MedoKit® <strong>gratis</strong>. <a href="https://app.medokit.com/signup?promo=covid">Clic aquí</a>-->
+                    Crea una cuenta <strong>gratis</strong> y empieza hoy <a class="btn-link btn-filled" onclick="return goToDemo();">Clic aquí</a>
                 </span>
             </p>
         </div>
@@ -403,6 +408,21 @@
                 nameField.focus(); // Set focus again
             }
         });
+    }
+
+    function goToDemo() {
+        // let baseUrl = location.protocol + '//' + location.hostname + (location.port ? ':' + location.port : '');
+        let baseUrl = 'http://localhost:3000';
+        let autoLinkUrl = baseUrl + '/signup?promo=demo';
+
+        const params = new URLSearchParams(window.location.search);
+
+        if (params.has('promo')) {
+            const promo = params.get('promo');
+            autoLinkUrl = baseUrl + '/signup?promo=' + promo;
+        }
+
+        window.location.replace(autoLinkUrl);
     }
 
     $(function() {

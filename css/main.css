@@ -578,6 +578,17 @@ footer .rights {
     display: inline-block;
 }
 
+.covid-offer.section p span a.btn-link.btn-filled {
+    background-color: transparent;
+    border-color: var(--cAltGray);
+    color: var(--cAltGray);
+    padding: 5px 12px 4px;
+    margin-left: 3px;
+    font-weight: 700;
+    letter-spacing: normal;
+    font-size: 14px;
+}
+
 /*.covid-offer.section p span strong {*/
 /*}*/
 
