@@ -411,8 +411,8 @@
     }
 
     function goToDemo() {
-        // let baseUrl = location.protocol + '//' + location.hostname + (location.port ? ':' + location.port : '');
-        let baseUrl = 'http://localhost:3000';
+        let baseUrl = location.protocol + '//' + location.hostname + (location.port ? ':' + location.port : '');
+        // let baseUrl = 'http://localhost:3000';
         let autoLinkUrl = baseUrl + '/signup?promo=demo';
 
         const params = new URLSearchParams(window.location.search);
