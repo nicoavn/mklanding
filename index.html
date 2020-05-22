@@ -411,17 +411,23 @@
     }
 
     function goToDemo() {
-        let appUrl = 'https://app.medokit.com';
-        let autoLinkUrl = appUrl + '/signup?promo=demo';
+        let autoLinkUrl = 'https://app.medokit.com/signup?ref=l';
 
         const params = new URLSearchParams(window.location.search);
 
+        let hasPromo = false;
         if (params.has('promo')) {
             const promo = params.get('promo');
-            autoLinkUrl = appUrl + '/signup?promo=' + promo;
+            hasPromo = true;
+            autoLinkUrl += '&promo=' + promo;
         }
 
-        window.location.replace(autoLinkUrl);
+        if (params.has('referral')) {
+            const referral = params.get('referral');
+            autoLinkUrl += '&referral=' + referral;
+        }
+
+        window.location.replace(autoLinkUrl + (hasPromo ? '' : '&promo=demo'));
     }
 
     $(function() {
