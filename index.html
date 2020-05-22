@@ -418,7 +418,7 @@
 
         if (params.has('promo')) {
             const promo = params.get('promo');
-            autoLinkUrl = baseUrl + '/signup?promo=' + promo;
+            autoLinkUrl = appUrl + '/signup?promo=' + promo;
         }
 
         window.location.replace(autoLinkUrl);
