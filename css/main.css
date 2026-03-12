@@ -53,6 +53,11 @@ h4 {
     color: var(--cMainBlueLight);
 }
 
+h2,
+h3 {
+    font-family: var(--fSecondary);
+}
+
 p strong {
     font-size: 18px;
     font-weight: 700;
@@ -177,9 +182,23 @@ span.big {
     color: white;
 }
 
+.welcome.section .hero-title,
 .welcome.section p {
     font-size: 56px;
     font-family: var(--fSecondary);
+}
+
+.welcome.section .hero-title {
+    margin: 0;
+    line-height: 1.15;
+}
+
+.welcome.section .hero-description {
+    font-family: var(--fMain);
+    font-size: 20px;
+    line-height: 1.6;
+    max-width: 900px;
+    margin: 28px auto 0;
 }
 
 .welcome.section p a {
@@ -257,6 +276,7 @@ span.big {
     background: var(--cMainBlueLighter);
 }
 
+.pricing.section > div > h2,
 .pricing.section > div > h4 {
     margin: 0 0 18px;
     color: var(--cMainBlue);
@@ -345,6 +365,7 @@ span.big {
     padding: 45px 0 22px;
 }
 
+.form-appointment.section h2,
 .form-appointment.section h3 {
     letter-spacing: 5px;
     text-align: center;
@@ -356,7 +377,9 @@ span.big {
     margin: 18px 0 24px;
 }
 
-.form-appointment.section form input[type="text"] {
+.form-appointment.section form input[type="text"],
+.form-appointment.section form input[type="tel"],
+.form-appointment.section form input[type="email"] {
     border: none;
     padding-left: 0;
     padding-right: 0;
@@ -423,6 +446,14 @@ footer .footer-contact h3 {
     margin-bottom: 42px;
 }
 
+footer .footer-contact a,
+footer .footer-contact a:hover,
+footer .footer-contact a:focus,
+footer .footer-contact a:visited {
+    color: inherit;
+    text-decoration: none;
+}
+
 footer .footer-social {
 }
 
@@ -468,7 +499,20 @@ footer .rights {
     display: none;
 }
 
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
 @media (max-width: 1366px) {
+    .welcome.section .hero-title,
     .welcome.section p {
         font-size: 49px;
     }
@@ -504,11 +548,18 @@ footer .rights {
         padding-top: 0;
     }
 
+    .welcome.section .hero-title,
     .welcome.section p {
         padding-top: 74px;
         font-size: 15px;
         padding-left: 25px;
         padding-right: 25px;
+    }
+
+    .welcome.section .hero-description {
+        font-size: 15px;
+        padding-top: 20px;
+        line-height: 1.6;
     }
 
     .welcome.section p + p {
